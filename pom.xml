@@ -4,13 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>demo</groupId>
-    <artifactId>demo_spark</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>spark</groupId>
+    <artifactId>spark</artifactId>
+    <version>1.0</version>
 
     <!-- The Dependencies -->
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>demo</module>
+        <module>util</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -23,6 +27,16 @@
         <geotools.version>10.8</geotools.version>
         <scala.version.major>2.10</scala.version.major>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>util</groupId>
+                <artifactId>util</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <!-- json -->
@@ -68,9 +82,9 @@
 
 
         <dependency>
-        <groupId>org.apache.hbase</groupId>
-        <artifactId>hbase</artifactId>
-        <version>0.94.27</version>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase</artifactId>
+            <version>0.94.27</version>
         </dependency>
 
 
@@ -139,9 +153,9 @@
         </dependency>
         -->
         <!--<dependency>-->
-            <!--<groupId>org.wltea.ik-analyzer</groupId>-->
-            <!--<artifactId>ik-analyzer</artifactId>-->
-            <!--<version>3.2.8</version>-->
+        <!--<groupId>org.wltea.ik-analyzer</groupId>-->
+        <!--<artifactId>ik-analyzer</artifactId>-->
+        <!--<version>3.2.8</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.json4s</groupId>
@@ -271,22 +285,22 @@
             </plugin>
 
             <!--<plugin>-->
-                <!--<groupId>org.scalatest</groupId>-->
-                <!--<artifactId>scalatest-maven-plugin</artifactId>-->
-                <!--<version>1.0</version>-->
-                <!--<configuration>-->
-                    <!--<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>-->
-                    <!--<junitxml>.</junitxml>-->
-                    <!--<filereports>WDF TestSuite.txt</filereports>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>scala-test</id>-->
-                        <!--<goals>-->
-                            <!--<goal>test</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
+            <!--<groupId>org.scalatest</groupId>-->
+            <!--<artifactId>scalatest-maven-plugin</artifactId>-->
+            <!--<version>1.0</version>-->
+            <!--<configuration>-->
+            <!--<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>-->
+            <!--<junitxml>.</junitxml>-->
+            <!--<filereports>WDF TestSuite.txt</filereports>-->
+            <!--</configuration>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>scala-test</id>-->
+            <!--<goals>-->
+            <!--<goal>test</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
             <!--</plugin>-->
 
             <!--thrift-->

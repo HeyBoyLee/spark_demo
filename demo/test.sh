@@ -6,5 +6,5 @@ MODE="test"
 spark-submit \
 	--master local[2] \
 	--class com.mi.demo.HelloSpark \
-	target/metok_seperate_log-1.0-SNAPSHOT.jar ${MODE} ${INPUT} ${OUTPUT}
+	target/demo-1.0-SNAPSHOT.jar ${MODE} ${INPUT} ${OUTPUT}
 

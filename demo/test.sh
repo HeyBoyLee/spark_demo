@@ -5,6 +5,6 @@ OUTPUT="/user/output"
 MODE="test"
 spark-submit \
 	--master local[2] \
-	--class com.mi.demo.HelloSpark \
+	--class com.com.yk.ykLog \
 	target/demo-1.0-SNAPSHOT.jar ${MODE} ${INPUT} ${OUTPUT}
 

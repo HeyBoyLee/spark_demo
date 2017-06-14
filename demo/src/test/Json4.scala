@@ -5,8 +5,6 @@
 import org.json4s._
 import org.json4s.jackson.JsonMethods._
 
-
-
 object Json4 {
   case class Child(name: String, age: Int, birthdate: Option[java.util.Date])
   case class Address(street: String, city: String)

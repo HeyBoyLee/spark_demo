@@ -33,6 +33,5 @@ object Hello {
     println(json.apiInfo.get.serverGroup.get == "geolocate" )
 
   }
-
 }
 

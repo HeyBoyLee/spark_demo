@@ -11,9 +11,22 @@ object TimeTest {
   val time = "2017-03-07 04:58:10"
 
   def main(args: Array[String]) {
-    args.foreach(println)
-    println(getNowDate())
-    println(parse(time))
+//    args.foreach(println)
+//    println(getNowDate())
+//    println(parse(time))
+
+    val floatVar = 12.456
+    val intVar = 2000
+    val stringVar = "菜鸟教程!"
+    val fs: String = printf("浮点型变量为 " +
+      "%f, 整型变量为 %d, 字符串为 " +
+      " %s", floatVar, intVar, stringVar).toString
+
+
+    val date = printf("%s %s %s", "2017", "03", "19").toString
+    println(date.indexOf("("))
+//    println(date.substring(0, date.indexOf("()"))
+    if(date == "2017 03 19") println("xxxx")
   }
 
   def getPreHour():String= {

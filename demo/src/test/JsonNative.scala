@@ -7,7 +7,8 @@ import org.json4s.native.JsonMethods._
 
 object JsonNative {
   def main(args: Array[String]) {
-    val json = parse("""
+    val json: JValue = parse(
+      """
          { "name": "joe",
            "children": [
              {
